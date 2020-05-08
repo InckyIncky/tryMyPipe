@@ -41,6 +41,6 @@ node {
                 
                 Failed tests :  ${FAILED_TESTS} 
                 
-                Check console output at $BUILD_URL to view the results.''', subject: '$DEFAULT_SUBJECT', to: 'inkckyincky@yandex.ru, inckyincky049@gmail.com'
+                Check console output at $BUILD_URL to view the results.''', subject: '$DEFAULT_SUBJECT', to: 'inckyincky@yandex.ru, inckyincky049@gmail.com'
    }
 }
