@@ -33,13 +33,16 @@ node {
       emailext body: '''Testname: $PROJECT_NAME 
                 Build number: $BUILD_NUMBER 
                 Status : $BUILD_STATUS
-                
+                Git branch: ${GIT_BRANCH}
+
                 Test results:
                 Total: ${TEST_COUNTS,var="total"} 
                 Passed: ${TEST_COUNTS,var="pass"}
                 Failed: ${TEST_COUNTS,var="fail"} 
                 
                 Failed tests :  ${FAILED_TESTS} 
+                
+                Job description : ${JOB_DESCRIPTION}
                 
                 Check console output at $BUILD_URL to view the results.''', subject: '$DEFAULT_SUBJECT', to: 'inckyincky@yandex.ru, inckyincky049@gmail.com'
    }
