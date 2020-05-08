@@ -10,7 +10,9 @@ node {
        
     withMaven(maven: 'maven 3.6.3') {
          // some block
-         bat label: '', script: 'mvn clean test'
+         catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+            bat label: '', script: 'mvn clean test'
+         }
       }
    }
    stage('Results') {
