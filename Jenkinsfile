@@ -21,7 +21,7 @@ node {
       emailext body: '''Testname: $PROJECT_NAME 
                 Build number: $BUILD_NUMBER 
                 Status : $BUILD_STATUS
-                Git branch: ${GIT_BRANCH}
+                Git branch: ${GIT_BRANCH, fullName}
 
                 Test results:
                 Total: ${TEST_COUNTS,var="total"} 
