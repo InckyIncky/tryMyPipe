@@ -14,7 +14,7 @@ node {
       }
    }
    stage('Results') {
-      junit '**/target/surefire-reports/*.xml'
+      //junit '**/target/surefire-reports/*.xml'
       
       allure jdk: '', results: [[path: 'target/allure-results']]
       
